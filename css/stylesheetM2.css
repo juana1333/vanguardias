@@ -1,0 +1,452 @@
+
+* {
+    margin: 0;
+    padding: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#ffffff;
+}
+
+h1 {
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+
+h2 {
+    color: #4B2E2E;
+}
+
+h3 {
+    color: #7B3F00;
+}
+
+p {
+    font-size: small;
+    color: #3F3F3F;
+}
+
+footer {
+    background-color:#150e61;
+    text-align: left;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* HEADER */
+.caja_1 {
+  height: 80px;
+  width: 100%;
+  background-color:#150e61;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* GRILLA DE 12 COLUMNAS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+  margin-top: 60px;
+  padding: 16px;
+}
+
+/* MAIN ocupa 9 columnas */
+main {
+  grid-column: span 9;
+  width: 100%;
+}
+
+/* ASIDE ocupa 3 columnas */
+aside {
+  grid-column: span 3;
+  background-color: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch; /* Se adapta mejor a diferentes tamaños */
+}
+
+.caja_2,
+.caja_4,
+.caja_5,
+.caja_6,
+.caja_7 {
+    background-color: #e3edff;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    margin-bottom: 16px;
+    border-radius: 15px;
+}
+
+.caja_4 a,
+.caja_5 a,
+.caja_6 a,
+.caja_7 a {
+  text-decoration: none;
+  color: #333e9f;
+  font-weight: bold;
+}
+
+.caja_4 a:hover,
+.caja_5 a:hover,
+.caja_6 a:hover,
+.caja_7 a:hover {
+  color: #8b8bff;
+}
+
+.caja_2 {
+    background-color: #c1d7ff;
+    color: rgb(255, 255, 255);
+}
+
+/* Contenedor del mapa y formulario */
+.caja_8 {
+  background-color: #c0bdd1;
+  padding: 10px;
+  border-radius: 15px;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 15px;
+}
+
+/* El iframe del mapa */
+.caja_8 iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 240px;
+  border: none;
+  border-radius: 15px;
+}
+
+/* El formulario */
+.caja_8 form {
+  width: 100%;
+  max-width: 500px; /* límite máximo */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Campos del formulario */
+.caja_8 form input,
+.caja_8 form textarea,
+.caja_8 form select,
+.caja_8 form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+/* Responsive opcional (más control aún si querés) */
+@media (max-width: 600px) {
+  .caja_8 form {
+    max-width: 90%;
+  }
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.caja_movs {
+  height: 70px;
+  width: 100%;
+  background-color:#150e61;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  border: 1px solid black;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+h6 {
+    font-size: x-large;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caja_1 a {
+  text-decoration: none;
+  color: #e3edff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: medium;
+}
+
+.caja_1 a:hover {
+  color: #9999e3;
+}
+
+.contenedormovs {
+    margin-top: 30px;
+}
+
+h5 {
+    color: white;
+}
+
+h7 {
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.contenedorlinea {
+    margin-top: 30px;
+}
+
+.caja_9,
+.caja_10,
+.caja_11,
+.caja_12,
+.caja_13,
+.caja_14 {
+    display: flex;
+    position: relative;
+
+}
+
+
+
+
+.texto1 {
+  position: absolute;
+  top: 50%;
+  left: 25%; /* Cambiado de right: 75% para ser más claro y compatible */
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  z-index: 1;
+}
+
+.texto2 {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+  z-index: 1;
+}
+
+
+.seccion_tecnicas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.section_1 {
+    margin-top: 40px;
+}
+
+.tec1, .tec2, .tec3,
+.art1, .art2, .art3, .art4, .art5, .art6 {
+  border-radius: 25px;
+  max-width: 100%;
+  height: auto;
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11, .img12 {
+  border-radius: 25px;
+  max-width: 100%;
+}
+
+.imgprincipal {
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+}
+
+.caja_tecs,
+.caja_artistas,
+.caja_caracteristicas,
+.caja_contacto {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contenido_tecs,
+.contenido_artistas,
+.contenido_caracteristicas,
+.contenido_contacto {
+    padding-top: 30px;
+    max-width: 850px;
+    flex: 1;
+}
+
+.contenido_tecs h3,
+.contenido_artistas h3,
+.contenido_caracteristicas h3,
+.caja_contacto h3 {
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #150e61;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.contenido_tecs p,
+.contenido_artistas ul,
+.contenido_caracteristicas p,
+.contenido_contacto p {
+    font-size: medium;
+}
+
+.contenido_contacto h2 {
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #505050;
+  margin-bottom: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .caja_1 {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    position: static;
+  }
+
+  /* MEDIA QUERY para tablets */
+@media (max-width: 992px) {
+  aside {
+    grid-column: span 12;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .caja_8 {
+    flex: 1 1 48%; /* Se achican al 48% con espacio entre ellas */
+    min-width: 300px;
+  }
+}
+
+/* MEDIA QUERY para móviles */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* Una sola columna */
+  }
+
+  main,
+  aside {
+    grid-column: span 12;
+  }
+
+  aside {
+    flex-direction: column;
+  }
+
+  .caja_8 {
+    width: 100%;
+    flex: none;
+  }
+}
+
+  .container {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  main, aside {
+    grid-column: span 1;
+    width: 100%;
+  }
+
+  .caja_tecs,
+  .caja_artistas,
+  .caja_caracteristicas,
+  .caja_contacto {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .contenido_tecs,
+  .contenido_artistas,
+  .contenido_caracteristicas,
+  .contenido_contacto {
+    max-width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .texto1 {
+    font-size: 16px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .texto2 {
+    font-size: 16px;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .caja_8 {
+    align-items: center;
+  }
+
+  .caja_movs {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  h6, h7 {
+    font-size: medium;
+  }
+
+  .logo {
+    margin: 10px auto;
+  }
+}
+
+.contenido_tecs h2 {
+  color: black;
+  justify-content: space-between;
+  font-weight: 100;
+}
